@@ -1,0 +1,38 @@
+/* cursor.css */
+
+:root {
+    --hue: 38;
+    --sat: 69%;
+    --lig: 59%;
+    --first-color: hsl(var(--hue), var(--sat), var(--lig));
+  }
+  
+  body {
+    cursor: none;
+  }
+  
+  .cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.1s ease-in-out;
+    z-index: 9999;
+  }
+  
+  /* Add animation for cursor */
+  @keyframes followCursor {
+    0% {
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      transform: translate(calc(-50% + 10px), calc(-50% + 10px));
+    }
+  }
+  
+  .cursor.active {
+    animation: followCursor 0.1s ease-in-out forwards;
+  }
+  

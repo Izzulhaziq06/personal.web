@@ -34,4 +34,4 @@ This project is licensed under the (LICENSE).
 
 ## About Me
 
-I am Izzul Haziq, a student passionate about Science Technology. This website serves as my online portfolio, showcasing my skills and experiences. Feel free to explore and reach out to me for any inquiries or collaborations.
+I am Izzul Haziq, a student passionate about Mechatronic Engineering. This website serves as my online portfolio, showcasing my skills and experiences. Feel free to explore and reach out to me for any inquiries or collaborations.

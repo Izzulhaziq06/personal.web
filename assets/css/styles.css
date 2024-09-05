@@ -43,9 +43,10 @@
 
 /*=============== BASE ===============*/
 * {
-  box-sizing: border-box;
+  box-sizing: unset; /* border-box */
   padding: 0;
   margin: 0;
+  max-width: 1000px;
 }
 
 body {
@@ -78,7 +79,7 @@ img {
 .change-theme {
   position: absolute;
   top: 24px;
-  right: 0;
+  right: 10px;
   font-size: 20px;
   color: var(--title-color);
   cursor: pointer;
@@ -182,8 +183,8 @@ body.dark-theme {
 .profile__border {
   border: 3.5px solid var(--first-color);
   justify-self: center;
-  width: 115px;
-  height: 115px;
+  width: 105px; /* 115px */
+  height: 105px; /* 115px */
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -207,13 +208,13 @@ body.dark-theme {
   column-gap: .75rem;
 }
 
-.profile__social-link {
+.hgi-stroke {
   font-size: 1.25rem;
   color: var(--title-color);
   transition: .3s;
 }
 
-.profile__social-link:hover {
+.hgi-stroke:hover {
   color: var(--first-color);
 }
 
@@ -382,10 +383,10 @@ body.dark-theme {
 }
 
 /*=============== LIGHT DARK THEME===============*/
-.theme-button {
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
+#theme-button {
+  position: absolute;
+  margin-right: 1.5rem;
+  margin-top: 1.5rem;
   display: inline-flex;
   background-color: var(--first-color);
   padding: .5rem;
@@ -393,10 +394,24 @@ body.dark-theme {
   z-index: 9;
 }
 
-.theme-button i {
-  color: #fff;
+#theme-button {
+  color: var(--title-color);
   font-size: 1.25rem;
   cursor: pointer;
+}
+
+footer.footer.container {
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer__icon {
+  color: var(--second-color);
+}
+
+.footer__icon:hover {
+  color: #ff0000;
 }
 
 @media screen and (min-width: 968px) {
@@ -462,7 +477,7 @@ body.dark-theme {
   }
 
   .profile__info {
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 1.5rem;
   }
 
@@ -482,11 +497,11 @@ body.dark-theme {
 /* Medium devices (landscape tablets, 768px to 992px) */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .profile__data {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .profile__info {
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 1.5rem;
   }
 
@@ -506,11 +521,11 @@ body.dark-theme {
 /* Large devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .profile__data {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .profile__info {
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 2.5rem;
   }
 
